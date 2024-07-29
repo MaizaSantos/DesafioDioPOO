@@ -62,6 +62,26 @@ public class Dev {
         this.conteudosConcluidos = conteudosConcluidos;
     }
 
+    public int contarConteudosConcluidos() {
+        int contagem = 0;
+
+        for (Conteudo c : conteudosConcluidos) {
+            contagem += 1;
+        }
+
+        return contagem;
+    }
+
+    public int contarConteudosInscritos() {
+        int contagem = 0;
+
+        for (Conteudo c : conteudosInscritos) {
+            contagem += 1;
+        }
+
+        return contagem;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

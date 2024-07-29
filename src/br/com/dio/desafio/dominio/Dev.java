@@ -82,6 +82,16 @@ public class Dev {
         return contagem;
     }
 
+    public void cancelarInscricao() {
+        Optional<Conteudo> conteudo = this.conteudosInscritos.stream().findFirst();
+        if(conteudo.isPresent()) {
+            this.conteudosInscritos.remove(conteudo.get());
+            System.out.println("Matrícula cancelada!");
+        } else {
+            System.err.println("Você não está matriculado em nenhum conteúdo!");
+        }
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
